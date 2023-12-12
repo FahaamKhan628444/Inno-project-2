@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="summary">
+        <details> 
+            <a href="">Email: scholarfest17@gmail.com</a> <br>
+            <a href="">Call: +91 62844-48162 <br> Mon-Fri 10am-5pm</a>
+            <summary>
+                Contact Us
+            </summary>
+        </details>
+        </div>
+        <div class="content">
+            <p>Scholarship Test 2024</p>
+            <h1> will be <span>Live</span> on 1st Januray, 2024 </h1>
+            <div class="launch-time">
+            <div>
+                <p id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+            </div>
+            <button>Register now</button>
+            <h3>Hurry Up!  Register now and take benefit</h3>
+        </div>
+        <img src="images/rocket.png" class="rocket" alt="">
+    </div>
+
+    <script>
+        var countDownDate=new Date("Jan 1 , 2024 00:00:00").getTime();
+        var x=setInterval(function(){
+            var now= new Date().getTime();
+            var distance= countDownDate-now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+        document.getElementById("days").innerHTML= days;
+        document.getElementById("hours").innerHTML= hours;
+        document.getElementById("minutes").innerHTML= minutes;
+        document.getElementById("seconds").innerHTML= seconds;
+        },1000);
+    </script>
+    <!-- <link rel="stylesheet" href="script.js"> -->
+</body>
+</html>
